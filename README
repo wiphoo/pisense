@@ -3,7 +3,7 @@ clock speeds and voltages on the Raspberry pi.
 
 HOW TO SETUP MUNIN PLUGINS
  1. create new direction called "3rd-plugins" under /usr/share/munin/plugins
-```
+```bash
 sudo mkdir /usr/share/munin/plugins/3rd-plugins
 ```
  2. download and copy plugin pisense_ into /usr/share/munin/plugins/3rd-plugins
