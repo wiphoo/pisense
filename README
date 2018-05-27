@@ -1,2 +1,35 @@
 First stab at a simple Munin plugin to track temperature,
 clock speeds and voltages on the Raspberry pi.
+
+HOW TO SETUP MUNIN PLUGINS
+ 1. create new direction called "3rd-plugins" under /usr/share/munin/plugins
+```
+sudo mkdir /usr/share/munin/plugins/3rd-plugins
+```
+ 2. download and copy plugin pisense_ into /usr/share/munin/plugins/3rd-plugins
+```
+wget https://github.com/wiphoo/munin-pisense/blob/master/pisense_
+sudo cp pisense_ /usr/share/munin/plugins/3rd-plugins
+```
+ 3. change permission to executable
+```
+sudo chmod 755 /usr/share/munin/plugins/3rd-plugins/pisense_
+```
+ 4. enable the plugins by link a pisense_ file to munin plugins with subfix temp, volt and clock
+```
+sudo ln -s /usr/share/munin/plugins/3rd-plugins/pisense_ pisense_temp
+sudo ln -s /usr/share/munin/plugins/3rd-plugins/pisense_ pisense_volt
+sudo ln -s /usr/share/munin/plugins/3rd-plugins/pisense_ pisense_clock
+```
+ 5. allow pisense_ to run as root
+   5.1 create new munin plugin config file
+```
+sudo nano -w /etc/munin/plugin-conf.d/pisense
+```
+   5.2 add following config
+```
+# making pisense_ run as root user
+[pisense_*]
+user root
+```
+ 
