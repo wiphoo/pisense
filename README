@@ -32,4 +32,9 @@ sudo nano -w /etc/munin/plugin-conf.d/pisense
 [pisense_*]
 user root
 ```
+
+ 6. allow pisense_ to run as root
+# restart munin-nodes
+sudo systemctl restart munin-node
+
  
