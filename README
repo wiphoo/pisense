@@ -8,7 +8,7 @@ sudo mkdir /usr/share/munin/plugins/3rd-plugins
 ```
  2. download and copy plugin pisense_ into /usr/share/munin/plugins/3rd-plugins
 ```
-wget https://github.com/wiphoo/munin-pisense/blob/master/pisense_
+wget https://raw.githubusercontent.com/wiphoo/munin-pisense/master/pisense_
 sudo cp pisense_ /usr/share/munin/plugins/3rd-plugins
 ```
  3. change permission to executable
