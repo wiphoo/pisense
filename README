@@ -17,6 +17,7 @@ sudo chmod 755 /usr/share/munin/plugins/3rd-plugins/pisense_
 ```
  4. enable the plugins by link a pisense_ file to munin plugins with subfix temp, volt and clock
 ```
+cd /etc/munin/plugins/
 sudo ln -s /usr/share/munin/plugins/3rd-plugins/pisense_ pisense_temp
 sudo ln -s /usr/share/munin/plugins/3rd-plugins/pisense_ pisense_volt
 sudo ln -s /usr/share/munin/plugins/3rd-plugins/pisense_ pisense_clock
